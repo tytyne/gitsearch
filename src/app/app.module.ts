@@ -5,10 +5,11 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 
 import { ProfileComponent } from "./components/profile.component";
+import { SeachFormComponent } from './seach-form/seach-form.component';
 
 @NgModule({
   imports: [BrowserModule, HttpModule, FormsModule],
-  declarations: [AppComponent, ProfileComponent],
+  declarations: [AppComponent, ProfileComponent, SeachFormComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
