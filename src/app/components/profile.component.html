@@ -1,5 +1,23 @@
-<form>
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Enter Github username here" (keyup)='submitSearch($event)'>
+<div class="container">
+    <div class="jumbotron">
+        <h1>GitHub Search</h1>
     </div>
-</form>
+    <div class="row">
+        <div class="col-md-6">
+            <app-profile-form></app-profile-form>
+            <a href="{{ user.html_url }}" class="btn btn-success" id="view">Search</a>
+        </div>
+        <div class="col-md-6">
+            <table>
+                <tr>
+                    <td>Github username:</td>
+                    <td class="label">{{ user.login }}</td>
+                </tr>
+                <tr>
+                    <td>Repositories:</td>
+                    <td class="label">{{ user.public_repos }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
