@@ -16,7 +16,7 @@ export class GithubService {
   items;
   constructor(private http: HttpClient) {
     this.username = "tytyne";
-    this.user = new User(" ", " ", " ", " ", " ", " ", 0, 0, 0);
+    this.user = new User(" ", " ", " ", " ", " ", " ", 0, 0, 0, new Date());
     this.repo = new Repo(" ", " ", " ", " ", " ");
   }
   getProfileInfo(username) {
@@ -30,6 +30,7 @@ export class GithubService {
       html_url: string;
       followers: number;
       following: number;
+      created_at: Date;
     }
     const promise = new Promise((resolve, reject) => {
       this.http
@@ -45,6 +46,7 @@ export class GithubService {
           this.user.html_url = profile.html_url;
           this.user.followers = profile.followers;
           this.user.following = profile.following;
+          this.user.created_at = profile.created_at;
 
           console.log(profile);
           resolve();

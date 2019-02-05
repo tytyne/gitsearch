@@ -8,12 +8,14 @@ import { ProfileComponent } from "./components/profile.component";
 // import { SearchFormComponent } from "./search-form/search-f";
 // import { StrikethroughDirective } from "./strikethrough.directive";
 import { SearchFormComponent } from "./search-form/search-form.component";
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    DateCountPipe
     // StrikethroughDirective
   ],
   imports: [BrowserModule, HttpClientModule],

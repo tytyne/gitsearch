@@ -13,6 +13,7 @@ export class SearchFormComponent implements OnInit {
     this.githubService.getProfileInfo(name.target.value);
     this.githubService.getProfileInfo(name.target.value);
     this.githubService.getProfileInfo(name.target.value);
+    this.githubService.getProfileInfo(name.target.value);
   }
   constructor(
     private githubService: GithubService,

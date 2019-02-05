@@ -16,46 +16,56 @@
                     <img src="{{user.avatar_url}}" class="profile-img img-thumbnail m-b-1" />
                     <a class="btn btn-sm btn-outline-primary btn-block m-t-1" href="{{user.html_url}}" target="_blank">View
           Profile</a>
+
+
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <td>Github username:</td>
+                            <td class="label">{{ user.login }}</td>
+                        </tr>
+                        <tr>
+                            <td>Repositories:</td>
+                            <td class="label">{{ user.public_repos }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Followers:</td>
+                            <td class="label">{{ user.followers }}</td>
+                        </tr>
+                        <tr>
+                            <td>Following:</td>
+                            <td class="label">{{ user.following }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Location:</td>
+                            <td class="label">{{ user.location}}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Email:</td>
+                            <td class="label">{{ user.email}}</td>
+
+                        </tr>
+
+
+                        <tr>
+                            <td>creation date:</td>
+                            <td class="label">{{ user.created_at}}</td>
+                        </tr>
+
+                    </table>
+
+
                 </div>
             </div>
         </div>
-
-
-
-        <div class="col-md-6">
-            <table>
-                <tr>
-                    <td>Github username:</td>
-                    <td class="label">{{ user.login }}</td>
-                </tr>
-                <tr>
-                    <td>Repositories:</td>
-                    <td class="label">{{ user.public_repos }}</td>
-                </tr>
-
-                <tr>
-                    <td>Followers:</td>
-                    <td class="label">{{ user.followers }}</td>
-                </tr>
-                <tr>
-                    <td>Following:</td>
-                    <td class="label">{{ user.following }}</td>
-                </tr>
-
-                <tr>
-                    <td>Location:</td>
-                    <td class="label">{{ user.location}}</td>
-                </tr>
-
-                <tr>
-                    <td>Email:</td>
-                    <td class="label">{{ user.email}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
-<!-- 
+        <!-- 
         <div class="col-md-6">
             <ul class="list-group">
                 <li class="list-group-item"><b>Username: </b> {{user.login}}</li>
@@ -73,7 +83,7 @@
         </div> -->
 
 
-<!-- <div class="status m-t-1">
+        <!-- <div class="status m-t-1">
 
     <span class="p-a-05 bg-info text-xs-center"> {{user.public_repos}} Public Repos </span>
 
@@ -101,7 +111,7 @@
 
 
 
-<!-- <div class="m-x-auto" *ngIf="githubUser.user == false && (githubUser.userName && githubUser.userName.length > 0)">
+        <!-- <div class="m-x-auto" *ngIf="githubUser.user == false && (githubUser.userName && githubUser.userName.length > 0)">
 
   <div class="starter-template text-xs-center">
     <h5>User Profile not found.</h5>
@@ -119,7 +129,7 @@
 
 </div> -->
 
-<!-- <div class="card">
+        <!-- <div class="card">
     <h4 class="card-header">{{user.name}}</h4>
     <div class="card-block">
         <div class="row">
@@ -179,11 +189,11 @@
             <div class="list-group">
 
                 <a *ngFor="let repo of githubUser.repos" href="{{repo.html_url}}" target="_blank" class="list-group-item list-group-item-action"> -->
-<!-- <span class="tag tag-info pull-xs-right">{{repo.watchers}} Watchers</span>
+        <!-- <span class="tag tag-info pull-xs-right">{{repo.watchers}} Watchers</span>
                         <span class="tag tag-success pull-xs-right m-r-05">{{repo.forks}} Forks</span> -->
-<!-- <h6 class="list-group-item-heading">{{repo.name}}</h6> -->
-<!-- <p class="list-group-item-text">{{repo.description}}</p> -->
-<!-- </a>
+        <!-- <h6 class="list-group-item-heading">{{repo.name}}</h6> -->
+        <!-- <p class="list-group-item-text">{{repo.description}}</p> -->
+        <!-- </a>
 
             </div>
         </div> -->
