@@ -1,8 +1,12 @@
 <div class="container">
     <div class="jumbotron">
         <h1>GitHub Search</h1>
-    </div>
+        <div class="col-md-6">
+            <app-search-form></app-search-form>
+            <a href="{{ user.html_url }}" class="btn btn-success" id="view">Search</a>
+        </div>
 
+    </div>
 
     <div class="card">
         <h4 class="card-header">{{user.name}}</h4>
@@ -18,10 +22,6 @@
 
 
 
-        <div class="col-md-6">
-            <app-search-form></app-search-form>
-            <a href="{{ user.html_url }}" class="btn btn-success" id="view">Search</a>
-        </div>
         <div class="col-md-6">
             <table>
                 <tr>
@@ -55,6 +55,50 @@
         </div>
     </div>
 </div>
+<!-- 
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item"><b>Username: </b> {{user.login}}</li>
+                <li class="list-group-item"><b>Repositosies: </b> {{user.public_repos}}</li>
+
+
+                <li class="list-group-item"><b>Followers: </b> {{user.followers}}</li>
+                <li class="list-group-item"><b>Following: </b> {{.user.following}}</li>
+
+
+                <li class="list-group-item"><b>Location: </b> {{user.location}}</li>
+                <li class="list-group-item"><b>E-Mail: </b> {{.user.email}}</li>
+
+            </ul>
+        </div> -->
+
+
+<!-- <div class="status m-t-1">
+
+    <span class="p-a-05 bg-info text-xs-center"> {{user.public_repos}} Public Repos </span>
+
+    <span class="p-a-05 bg-danger m-t-1 text-xs-center"> {{user.followers}} Followers </span>
+    <span class="p-a-05 bg-inverse m-t-1 text-xs-center"> {{user.following}} Followings </span>
+
+
+</div>
+
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+ -->
+
+
+
+
+
+
+
 
 
 <!-- <div class="m-x-auto" *ngIf="githubUser.user == false && (githubUser.userName && githubUser.userName.length > 0)">
