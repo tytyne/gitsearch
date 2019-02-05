@@ -4,7 +4,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <app-profile-form></app-profile-form>
+            <app-search-form></app-search-form>
             <a href="{{ user.html_url }}" class="btn btn-success" id="view">Search</a>
         </div>
         <div class="col-md-6">
@@ -16,6 +16,25 @@
                 <tr>
                     <td>Repositories:</td>
                     <td class="label">{{ user.public_repos }}</td>
+                </tr>
+
+                <tr>
+                    <td>Followers:</td>
+                    <td class="label">{{ user.followers }}</td>
+                </tr>
+                <tr>
+                    <td>Following:</td>
+                    <td class="label">{{ user.following }}</td>
+                </tr>
+
+                <tr>
+                    <td>Location:</td>
+                    <td class="label">{{ user.location}}</td>
+                </tr>
+
+                <tr>
+                    <td>Email:</td>
+                    <td class="label">{{ user.email}}</td>
                 </tr>
             </table>
         </div>

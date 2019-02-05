@@ -3,11 +3,12 @@ import { HttpClient } from "@angular/common/http";
 import { User } from "../user";
 import { environment } from "../../environments/environment";
 import { Repo } from "../repo";
+import { NumberSymbol } from "@angular/common";
 
 @Injectable({
   providedIn: "root" //we declare that this service should be created by the root application injector.
 })
-export class ProfileService {
+export class GithubService {
   repo: Repo;
   user: User;
 
@@ -16,7 +17,7 @@ export class ProfileService {
   constructor(private http: HttpClient) {
     console.log("service is now ready!");
     this.username = "kayitesijackie";
-    this.user = new User(" ", " ", " ", " ", " ", 0, " ");
+    this.user = new User(" ", " ", " ", " ", " ", " ", 0, 0, 0);
     this.repo = new Repo(" ", " ", " ", " ", " ");
   }
   getProfileInfo(username) {
@@ -28,6 +29,8 @@ export class ProfileService {
       location: string;
       public_repos: number;
       html_url: string;
+      followers: number;
+      following: number;
       // return this.http.get("https://api.github.com/users/" + this.username)
     }
     const promise = new Promise((resolve, reject) => {
@@ -42,6 +45,8 @@ export class ProfileService {
           this.user.location = profile.location;
           this.user.public_repos = profile.public_repos;
           this.user.html_url = profile.html_url;
+          this.user.followers = profile.followers;
+          this.user.following = profile.following;
 
           console.log(profile);
           resolve();
