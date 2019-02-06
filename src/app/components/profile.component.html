@@ -22,7 +22,7 @@
 
                 <div class="col-md-8">
                     <div class="stats">
-                        <span class="label label-default">{{ user.public_repos }} Public Repos</span>
+                        <span class="label label-default">{{ user.public_repos }} Public Repositories</span>
 
                         <span class="label label-success">{{ user.followers }} Followers</span>
                         <span class="label label-info">{{ user.following }} Following</span>
@@ -30,7 +30,7 @@
                     <br />
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <strong>Username: </strong>{{ user.name }}
+                            <strong>Username: </strong>{{user.login}}
                         </li>
                         <li class="list-group-item">
                             <strong>Repositories: </strong>{{ user.public_repos }}
@@ -42,11 +42,18 @@
                         <li class="list-group-item">
                             <strong>Following: </strong>{{ user.following }}
                         </li>
+
+                        <li class="list-group-item">
+                            <strong>Location: </strong>{{ user.location }}
+                        </li>
+
                         <li class="list-group-item">
                             <strong>Email: </strong>{{ user.email }}
                         </li>
+
+
                         <li class="list-group-item">
-                            <strong>Member Since: </strong>{{ user.created_at|date }}
+                            <strong>Member Since: </strong>{{ user.creation|date }}
                         </li>
                     </ul>
                 </div>

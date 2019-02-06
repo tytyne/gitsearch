@@ -30,7 +30,7 @@ export class GithubService {
       html_url: string;
       followers: number;
       following: number;
-      created_at: Date;
+      creation: Date;
     }
     const promise = new Promise((resolve, reject) => {
       this.http
@@ -46,7 +46,7 @@ export class GithubService {
           this.user.html_url = profile.html_url;
           this.user.followers = profile.followers;
           this.user.following = profile.following;
-          this.user.created_at = profile.created_at;
+          this.user.creation = profile.creation;
 
           console.log(profile);
           resolve();
