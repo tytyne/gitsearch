@@ -7,7 +7,7 @@ The github search is an application designed to help the user search for github 
 ## Setup/Installation Requirements
 * Open your computer
 * Connect to internet
-* search for my link: https://tytyne.github.io/GitHub/
+* search for my link: https://tytyne.github.io/gitsearch/
 * There you are!
 The github app can be view on mobile or computer and with ease and it is made for easy learning.
 ## App Specifications
